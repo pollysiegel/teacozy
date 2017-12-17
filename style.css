@@ -1,13 +1,41 @@
 body {
+    font-family: Helvetica;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
 }
 
 header {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 69px;
+    top: 0px;
+    border-bottom: 1px solid seashell;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
 }
 
-nav {
+header nav {
+    display: inline-flex;
+    justify-content: space-around;
+    padding-left: 50px;
+    padding-right: 10px;
+    width: 400px;
 }
 
-nav a {
+header nav a {
+    display: inline-flex;
+    text-decoration: underline;
+    color: gray;
+}
+
+header .logo {
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 50px;
 }
 
 span {
@@ -15,6 +43,7 @@ span {
 }
 
 main {
+    width: 1240px;
 }
 
 footer {
