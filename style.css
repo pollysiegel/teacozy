@@ -1,12 +1,9 @@
 body {
     background-color: black;
     font-size: 22px;
-}
-
-h1, h2, h3, h4, h5, nav, span {
+    opacity: 0.9;
     font-family: Helvetica;
     color: seashell;
-    opacity: 0.9;
 }
 
 header {
@@ -18,7 +15,7 @@ header {
     border-bottom: 1px solid seashell;
     background-color: black;
     position: fixed;
-    z-index: 10;
+    z-index: 1;
     width: 100%;
 }
 
@@ -40,6 +37,7 @@ header .logo {
     display: flex;
     justify-content: flex-start;
     padding-right: 50px;
+    padding-left: 10px;
 }
 
 .column {
@@ -74,6 +72,7 @@ main {
     justify-content: center;
     background-image: url(./images/img-mission-background.jpg);
     height: 700px;
+    width: 100%;
 }
 
 .mission span {
@@ -92,10 +91,6 @@ main {
     width: 1000px;
 }
 
-.tea-container h2, .tea-container h4 {
-    padding-top: 10px;
-}
-
 .teas {
     display: flex;
     flex-direction: row;
@@ -103,13 +98,24 @@ main {
     align-items: center;
 }
 
+.teas:first-of-type {
+    justify-content: space-between;
+}
+
 .tea {
-    padding: 0 10px;
 }
 
 .tea img {
     height: 200px;
     width: 300px;
+}
+
+.tea:last-of-type {
+    margin-left: 34px;
+}
+
+.tea h4 {
+    margin-top: 10px;
 }
 
 .locations-container {
@@ -118,11 +124,16 @@ main {
     align-content: center;
     justify-content: center;
     height: 500px;
+    width: 100%;
     background-image: url(./images/img-locations-background.jpg)
 }
 
 h2.locations-container {
     display: flex;
+}
+
+h2#ourlocations {
+    margin-bottom: 15px;
 }
 
 .locations {
