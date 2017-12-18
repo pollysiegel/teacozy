@@ -2,8 +2,9 @@ body {
     background-color: black;
     font-size: 22px;
     opacity: 0.9;
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif;
     color: seashell;
+    margin-left: 0;
 }
 
 header {
@@ -11,12 +12,22 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 69px;
-    top: 0px;
+    top: 0;
     border-bottom: 1px solid seashell;
     background-color: black;
     position: fixed;
     z-index: 1;
     width: 100%;
+}
+
+/* Anchors should account for fixed header height */
+
+:target::after {
+    content: "";
+    display:block;
+    position: relative;
+    height: 69px;
+    margin-top: -69px;
 }
 
 header nav {
@@ -37,17 +48,7 @@ header .logo {
     display: flex;
     justify-content: flex-start;
     padding-right: 50px;
-    padding-left: 10px;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
+    padding-left:id="featured" 10px;
 }
 
 
@@ -100,9 +101,6 @@ main {
 
 .teas:first-of-type {
     justify-content: space-between;
-}
-
-.tea {
 }
 
 .tea img {
@@ -164,3 +162,4 @@ h2#ourlocations {
     text-align: left;
     margin-left: 20px;
 }
+
